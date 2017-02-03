@@ -72,4 +72,11 @@ Yes please! See the [CONTRIBUTING](https://github.com/uxcore/uxcore/blob/master/
 
 | Name | Type | Required | Default | Comments |
 |---|---|---|---|---|
+| 参数名 | 说明 | 必填 | 类型 | 默认值 | 可选值 | 备注 |
+| lineLimit | number | false | 1 | 限制文字只显示几行。 |
+| text | string | true | '' | 要处理的文字。 |
+| style | object | false | | 内联的样式 |
+| className | string | false | '' | 自定义的 className |
+| showTooltip | boolean | false | false | 是否显示 tooltip 信息 |
+| overlayClassName | string | false | '' | 如果显示 tooltip 信息则可设置 tooltip 样式，否则不生效 |
 
