@@ -98,9 +98,11 @@ class TextEllipsis extends React.Component {
       } else {
 
         let lineCount = 10;
+        
         if (wrapWidth !== 'auto') {
           lineCount = parseFloat(wrapWidth / fontSize, 10);
         }
+
         lineCount = Math.floor(lineCount);
 
         let textArr = getTextArr(text, lineCount, lineLimit);
@@ -157,7 +159,8 @@ function getTextArr(text, lineTextLength, lineLimit) {
   }
 
   if (result.length > lineLimit) {
-    result.splice(lineLimit);
+    // 兼容 IE8 ，splice方法必须要有第二个参数
+    result.splice(lineLimit,result.length-lineLimit);
   }
 
   return result;
