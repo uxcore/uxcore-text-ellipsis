@@ -5,4 +5,41 @@
  * Copyright 2015-2016, Uxcore Team, Alinw.
  * All rights reserved.
  */
+.textContainer {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  .text {
+    width: 90%;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .check-all {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .check-all .dot-more {
+    display: inline-block;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    vertical-align: middle;
+    text-align: right;
+    background: -prefix-linear-gradient(right, white, rgba(255,255,255,0));
+    background: linear-gradient(to left, white, rgba(255,255,255,0));
+    color: #999;
+  }
 
+  .check-all .handler {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    color: #999;
+    bottom: 3px;
+    right: 0;
+  }
+}
